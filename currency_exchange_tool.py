@@ -1,13 +1,18 @@
-import math # you'll probably need this
-
-exchange_rates = {
-    'USD': 1.13, #I.E. 1 Pound is 1.13 Dollars
-    'EUR': 1.15,
-}
-
-def check_currency_exists(currency):
-    return
-
-def currency_convert(original_c, new_c, amount):
-    # your code here
-    return
+from moneyexchangeapi import exchange_rates
+from TONYE1 import currency_convert
+def check_currency_exists(currencyvalidity,finalcost):
+    a = True
+    while a == True:
+     currency = input("Choose a desired currency(USD,EUR,CAD,ALL,VND) : ")
+     if not currency.isalpha():
+         print(" Invalid format ")
+     if currency.upper() in exchange_rates:
+         currencyvalidity = True
+         if currencyvalidity == True:
+            new_c = currency
+            amount = finalcost
+            
+            currency_convert(new_c, amount)
+            a = False
+     else:
+         print ("Currency unavailable")
