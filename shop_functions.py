@@ -52,18 +52,3 @@ def start_shop():
       print(f.renderText("Your total cost is £"+str(totalcost)))
       print(f.renderText(str(basket)))
       return totalcost
-
-   
-          
-          
-          
-          
-          
-          
-      
-      
-    
-   
-
-
-    
