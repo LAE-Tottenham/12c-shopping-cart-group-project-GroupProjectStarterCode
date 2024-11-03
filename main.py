@@ -1,5 +1,7 @@
 import currency_exchange_tool 
+import deliveryprice
 import shop_functions 
 
 cost = shop_functions.start_shop()
-print(currency_exchange_tool.convertornot(cost,"GBP"))
+costandship = deliveryprice.deliveryprice(cost)
+print(currency_exchange_tool.convertornot(costandship,"GBP"))

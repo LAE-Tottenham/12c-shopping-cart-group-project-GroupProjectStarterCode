@@ -3,7 +3,7 @@ from geopy import distance
 from ukpostcodeutils import validation
 geocoder= Nominatim(user_agent="Geocoder")
 location1="N17 0BX"
-def deliveryprice():
+def deliveryprice(cost):
   shipping_price=0
   postcode=input("Enter your post code ")
   postcode= (postcode.replace(" ","")).upper()
@@ -26,9 +26,10 @@ def deliveryprice():
         shipping_price=20.00
       sameday=input("Would you like to have same day delivery for +£10.00?")
       sameday=sameday.capitalize()
-      if sameday=="Yes":
+      if sameday=="Yes" or sameday == "Y":
         shipping_price+=10.00
+      round(shipping_price,2)
       print("Your shipping price is ", shipping_price)
-      return (shipping_price)
+      return (shipping_price + cost)
   else:
       print("This postcode doesnt exist")

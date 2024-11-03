@@ -34,7 +34,7 @@ def start_shop():
             print(basketprice)
       extra=input(f.renderText("Would you like anything else?: "))
       extra=extra.capitalize()
-      while extra=="Yes":
+      while extra=="Yes" or extra == "Y":
             choices=input(f.renderText("What you would like to buy?"))
             choices=choices.capitalize()
             if choices in items:
