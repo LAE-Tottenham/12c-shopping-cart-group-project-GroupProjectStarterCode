@@ -1,10 +1,7 @@
-from currency_exchange_tool import currency_convert
-from shop_functions import start_shop
+import currency_exchange_tool 
+import deliveryprice
+import shop_functions 
 
-print('Welcome to my shop')
-
-while True:
-    print('Please select what you would like to buy')
-    items_to_buy = start_shop()
-
-    # blah blah 
+cost = shop_functions.start_shop()
+costandship = deliveryprice.deliveryprice(cost)
+print(currency_exchange_tool.convertornot(costandship,"GBP"))
