@@ -4,7 +4,7 @@ from ukpostcodeutils import validation
 # Initialize the Nominatim geocoder with a user agent name
 geocoder = Nominatim(user_agent="Geocoder")
 # Define a fixed location (postcode) to calculate distances from
-location1 = "N17 0BX"
+location1 = "N170BX"
 
 def deliveryprice(cost):
     shipping_price = 0
